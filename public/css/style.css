@@ -1,0 +1,255 @@
+:root {
+    --apple-blue: #007AFF;
+    --apple-green: #34C759;
+    --apple-red: #FF3B30;
+    --apple-gray: #8E8E93;
+    --apple-light-gray: #F2F2F7;
+    --apple-dark: #1C1C1E;
+    --apple-text: #000000;
+    --apple-secondary-text: #6C6C70;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--apple-text);
+    background-color: var(--apple-light-gray);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--apple-dark);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--apple-secondary-text);
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    color: var(--apple-dark);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.3px;
+}
+
+h3 {
+    color: var(--apple-dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.url-input {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid var(--apple-gray);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.url-input:focus {
+    outline: none;
+    border-color: var(--apple-blue);
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--apple-blue);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background-color: var(--apple-green);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #2da44e;
+}
+
+.info-container {
+    background-color: var(--apple-light-gray);
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.video-info {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.thumbnail {
+    width: 240px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    flex: 1;
+}
+
+.details p {
+    color: var(--apple-secondary-text);
+    margin-bottom: 0.75rem;
+}
+
+.progress-container {
+    background-color: var(--apple-light-gray);
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #E5E5EA;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: var(--apple-green);
+    transition: width 0.3s ease;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    color: var(--apple-secondary-text);
+    font-size: 0.9rem;
+}
+
+.error-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #FFF2F2;
+    color: var(--apple-red);
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.features ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.features li {
+    padding: 1.5rem;
+    background-color: var(--apple-light-gray);
+    border-radius: 12px;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.features li:before {
+    content: "✓";
+    position: absolute;
+    left: 1rem;
+    color: var(--apple-green);
+    font-weight: bold;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.platform-item {
+    background-color: var(--apple-light-gray);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.platform-item h3 {
+    color: var(--apple-blue);
+    margin-bottom: 1rem;
+}
+
+.platform-item p {
+    color: var(--apple-secondary-text);
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .video-info {
+        flex-direction: column;
+    }
+
+    .thumbnail {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+    }
+
+    .features ul,
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+} 

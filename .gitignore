@@ -1,0 +1,20 @@
+# 依赖目录
+node_modules/
+
+# 环境文件
+.env
+*.env.local
+
+# 日志文件
+*.log
+logs/
+
+# 系统文件
+.DS_Store
+
+# 编辑器配置
+.idea/
+.vscode/
+
+# 测试文件
+/test/ 
