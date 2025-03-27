@@ -16,9 +16,5 @@ logs/
 .idea/
 .vscode/
 
-# 二进制文件
-/tools/ffmpeg.exe
-/tools/yt-dlp.exe
-
 # 测试文件
 /test/ 
